@@ -1,26 +1,279 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+font-family: 'Segoe UI', sans-serif;
+background: #fafafa;
+color: #222;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  font-family: 'Corinthia', cursive; /* cursive font */
+  font-size: 5rem;
+  font-weight: 400;
+  color: #c01a08;
+  margin: 0;
+}
+
+.hero-banner {
+  position: relative;
+  text-align: center;
+  margin-bottom: 0px; /* space below banner */
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.hero-text p {
+  font-size: 2.5rem; /* Makes the subtitle bigger */
+  margin-top: 10px;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+.nav-links {
+display: flex;
+gap: 20px;
+list-style: none;
+color: #d71818;
+font-size: 1em;
+}
+
+.nav-links,
+.dropdownMenu {
+  list-style: none; /* removes bullets */
+  padding: 0;       /* remove default padding */
+  margin: 0;        /* remove default margin */
+}
+
+.cta {
+margin-top: 20px;
+padding: 12px 24px;
+background: #c01a08;
+color: white;
+border: none;
+cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover {
+  color: #c01a08;
+}
+
+.menu-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 20px;
+}
+
+.menu-card {
+background: white;
+padding: 20px;
+border-radius: 10px;
+}
+
+.footer {
+text-align: center;
+padding: 20px;
+background: #111;
+color: rgb(249, 247, 247);
+}
+
+.about-us {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f9d8c4; /* light warm background */
+}
+
+.about-text h3 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: 'Corinthia', cursive;
+  color: #c01a08;
+  word-spacing: 5px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  color: #333;
+}
+
+.about-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.food-image {
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.food-image:hover {
+  transform: scale(1.05);
+}
+
+.reserve-section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.reserve-input select {
+  appearance: none;
+  background-color: #ffe6cc; 
+}
+
+.reserve-title {
+  font-family: 'Corinthia', cursive;
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  word-spacing: 10px;
+  color: #c01a08;
+}
+
+.reserve-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.reserve-button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: none;
+  background-color: #c01a08;
+  color: white;
+  cursor: pointer;
+}
+
+.reserve-button:hover {
+  background-color: #c01a08;
+}
+
+.reserve-form {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Inputs + select */
+.reserve-input {
+  appearance: none;
+  background-color: #faebe1;
+  border: 1px solid #b8b7b7;
+  border-radius: 25px;
+  padding: 0.9rem ;
+  font-size: 1rem;
+  font-family: inherit;
+  min-width: 100px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reserve-input:hover {
+  border-color: #c01a08;
+}
+
+/* Focus */
+.reserve-input:focus {
+  outline: none;
+  border-color: #c01a08;
+  box-shadow: 0 0 0 2px rgba(192, 57, 43, 0.2);
+}
+
+/* Placeholder text */
+.reserve-input::placeholder {
+  color: #999;
+}
+
+/* Fix select arrow look */
+select.reserve-input {
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px;
+  padding-right: 2.5rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown title */
+.dropdownTitle {
+  cursor: pointer;
+  font-weight: 600;
+  color: #090909;
+}
+
+/* Dropdown menu */
+.dropdownMenu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background-color: #920c20;
+  border-radius: 4px;
+  padding: 12px 0;
+  min-width: 200px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  z-index: 200;
+}
+
+/* Dropdown items */
+.dropdownItem {
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdownMenu {
+  display: flex;
 }

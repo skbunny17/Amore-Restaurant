@@ -1,0 +1,97 @@
+/* Navbar container */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 100;
+}
+
+
+/* Logo */
+.logo {
+  font-family: "Corinthia", cursive;
+  font-size: 4.5rem;       /* big elegant logo */
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #222;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Menu links container */
+.menu {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+/* Menu links */
+.menu a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover {
+  color: #c01a08;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown title */
+.dropdownTitle {
+  cursor: pointer;
+  font-weight: 500;
+  color: #222;
+  transition: color 0.2s ease;
+}
+
+.dropdownTitle:hover {
+  color: #c01a08;
+}
+
+/* Make dropdown open to the left if near the edge */
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #111;
+  border-radius: 8px;
+  padding: 0;
+  min-width: 180px;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  z-index: 200;
+}
+
+/* Add a class if dropdown is near the edge */
+.dropdown.right-edge .dropdownMenu {
+  left: auto;   /* cancel left positioning */
+  right: 0;     /* align to the right of parent li */
+}
+
+/* Dropdown items */
+.dropdownItem {
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdownItem:hover {
+  background-color: #d7cece;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdownMenu {
+  display: flex;
+}
