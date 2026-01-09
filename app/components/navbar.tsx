@@ -1,107 +1,78 @@
 "use client";
 
-import React, { useState } from "react";
+import Link from "next/link";
+import React from "react";
 
 export default function Navbar() {
-  // TypeScript knows this is boolean
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
   return (
     <nav className="nav">
       <h1 className="logo">Amore</h1>
 
       <ul className="nav-links">
+        {/* Home */}
         <li>
-          <a href="/">Home</a>
+          <Link href="/" className="nav-link">
+            Home
+          </Link>
         </li>
 
-        {/* Clickable Menu */}
-        <li className="dropdown">
-          <span
-            className="dropdownTitle"
-            onClick={toggleMenu}
-            style={{ cursor: "pointer" }}
-          >
+        {/* Menu navigates to /menu page */}
+        <li>
+          <Link href="/menu" className="nav-link">
             Menu
-          </span>
-
-          {menuOpen && (
-            <ul className="dropdownMenu">
-              <li>
-                <a href="/menu/lunch" className="dropdownItem">
-                  Lunch Specials
-                </a>
-              </li>
-              <li>
-                <a href="/menu/dinner" className="dropdownItem">
-                  Dinner
-                </a>
-              </li>
-              <li>
-                <a href="/menu/desserts" className="dropdownItem">
-                  Desserts
-                </a>
-              </li>
-               <li>
-                <a href="/menu/drinks" className="dropdownItem">
-                  Drinks
-                </a>
-              </li>
-            </ul>
-          )}
+          </Link>
         </li>
 
+        {/* Contact */}
         <li>
-          <a href="/contact">Contact</a>
+          <Link href="/contact" className="nav-link">
+            Contact
+          </Link>
         </li>
 
-        {/* Hoverable Locations */}
+        {/* Locations dropdown */}
         <li className="dropdown">
           <span className="dropdownTitle">Locations</span>
           <ul className="dropdownMenu">
             <li>
-              <a href="/locations/sydney-cbd" className="dropdownItem">
+              <Link href="/locations/sydney-cbd" className="dropdownItem">
                 Sydney CBD
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/locations/parramatta" className="dropdownItem">
+              <Link href="/locations/parramatta" className="dropdownItem">
                 Parramatta
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/locations/bondi" className="dropdownItem">
+              <Link href="/locations/bondi" className="dropdownItem">
                 Bondi
-              </a>
+              </Link>
             </li>
-             <li>
-              <a href="/locations/bondi" className="dropdownItem">
+            <li>
+              <Link href="/locations/liverpool" className="dropdownItem">
                 Liverpool
-              </a>
+              </Link>
             </li>
-             <li>
-              <a href="/locations/bondi" className="dropdownItem">
+            <li>
+              <Link href="/locations/manly" className="dropdownItem">
                 Manly
-              </a>
+              </Link>
             </li>
-             <li>
-              <a href="/locations/bondi" className="dropdownItem">
+            <li>
+              <Link href="/locations/castle-hill" className="dropdownItem">
                 Castle Hill
-              </a>
+              </Link>
             </li>
-             <li>
-              <a href="/locations/bondi" className="dropdownItem">
+            <li>
+              <Link href="/locations/wetherill-park" className="dropdownItem">
                 Wetherill Park
-              </a>
+              </Link>
             </li>
-             <li>
-              <a href="/locations/bondi" className="dropdownItem">
+            <li>
+              <Link href="/locations/bankstown" className="dropdownItem">
                 Bankstown
-              </a>
+              </Link>
             </li>
           </ul>
         </li>

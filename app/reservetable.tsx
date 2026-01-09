@@ -4,6 +4,7 @@ export default function ReserveTable() {
   return (
     <section className="reserve-section">
       <h2 className="reserve-title">Reserve a Table</h2>
+      <p className="reserve-text"> Bookings for 10+ people require management approval. Please contact us to reserve a table in advance.</p>
 
       <form className="reserve-form">
         <input type="date" className="reserve-input" required />

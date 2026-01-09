@@ -1,16 +1,20 @@
+/* ===================== GLOBAL STYLES ===================== */
+
 body {
-margin: 0;
-font-family: 'Segoe UI', sans-serif;
-background: #fafafa;
-color: #222;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fafafa;
+  color: #222;
 }
+
+/* ===================== NAVBAR ===================== */
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: white;
+  background: #fef6f0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1000;
   position: relative;
@@ -25,10 +29,12 @@ color: #222;
   margin: 0;
 }
 
+/* ===================== HERO BANNER ===================== */
+
 .hero-banner {
   position: relative;
   text-align: center;
-  margin-bottom: 0px; /* space below banner */
+  margin-bottom: 0px;
 }
 
 .hero-image {
@@ -39,7 +45,7 @@ color: #222;
 }
 
 .hero-text p {
-  font-size: 2.5rem; /* Makes the subtitle bigger */
+  font-size: 2.5rem;
   margin-top: 10px;
 }
 
@@ -52,70 +58,40 @@ color: #222;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
 }
 
+/* ===================== NAV LINKS ===================== */
+
 .nav-links {
-display: flex;
-gap: 20px;
-list-style: none;
-color: #d71818;
-font-size: 1em;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  color: #d71818;
+  font-size: 1em;
 }
 
 .nav-links,
 .dropdownMenu {
-  list-style: none; /* removes bullets */
-  padding: 0;       /* remove default padding */
-  margin: 0;        /* remove default margin */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+/* ===================== CTA BUTTON ===================== */
 
 .cta {
-margin-top: 20px;
-padding: 12px 24px;
-background: #c01a08;
-color: white;
-border: none;
-cursor: pointer;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #c01a08;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.menu {
-  display: flex;
-  gap: 32px;
-  align-items: center;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #222;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.menu a:hover {
-  color: #c01a08;
-}
-
-.menu-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-gap: 20px;
-}
-
-.menu-card {
-background: white;
-padding: 20px;
-border-radius: 10px;
-}
-
-.footer {
-text-align: center;
-padding: 20px;
-background: #111;
-color: rgb(249, 247, 247);
-}
+/* ===================== ABOUT US ===================== */
 
 .about-us {
   padding: 60px 20px;
   text-align: center;
-  background: #f9d8c4; /* light warm background */
+  background: #f9d8c4;
 }
 
 .about-text h3 {
@@ -150,6 +126,8 @@ color: rgb(249, 247, 247);
   transform: scale(1.05);
 }
 
+/* ===================== RESERVE TABLE ===================== */
+
 .reserve-section {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -157,7 +135,7 @@ color: rgb(249, 247, 247);
 
 .reserve-input select {
   appearance: none;
-  background-color: #ffe6cc; 
+  background-color: #ffe6cc;
 }
 
 .reserve-title {
@@ -190,14 +168,10 @@ color: rgb(249, 247, 247);
   background-color: #c01a08;
 }
 
-.reserve-form {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
+.reserve-text {
+  text-align: center;
 }
 
-/* Inputs + select */
 .reserve-input {
   appearance: none;
   background-color: #faebe1;
@@ -216,19 +190,16 @@ color: rgb(249, 247, 247);
   border-color: #c01a08;
 }
 
-/* Focus */
 .reserve-input:focus {
   outline: none;
   border-color: #c01a08;
   box-shadow: 0 0 0 2px rgba(192, 57, 43, 0.2);
 }
 
-/* Placeholder text */
 .reserve-input::placeholder {
   color: #999;
 }
 
-/* Fix select arrow look */
 select.reserve-input {
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -237,18 +208,18 @@ select.reserve-input {
   padding-right: 2.5rem;
 }
 
+/* ===================== DROPDOWN ===================== */
+
 .dropdown {
   position: relative;
 }
 
-/* Dropdown title */
 .dropdownTitle {
   cursor: pointer;
   font-weight: 600;
   color: #090909;
 }
 
-/* Dropdown menu */
 .dropdownMenu {
   position: absolute;
   top: 120%;
@@ -263,7 +234,6 @@ select.reserve-input {
   z-index: 200;
 }
 
-/* Dropdown items */
 .dropdownItem {
   padding: 12px 20px;
   color: white;
@@ -271,9 +241,80 @@ select.reserve-input {
   transition: background-color 0.2s ease;
 }
 
-
-
-/* Show dropdown on hover */
 .dropdown:hover .dropdownMenu {
   display: flex;
+}
+
+/* ===================== FOOTER ===================== */
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: rgb(249, 247, 247);
+}
+
+/* ===================== PROFESSIONAL MENU STYLES ===================== */
+
+/* Center the menu container */
+.menu {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+
+/* Main menu title */
+.menu h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+/* Each menu section (Lunch, Dinner, Dessert, Drinks) */
+.menu-section {
+  margin-bottom: 50px;
+}
+
+/* Section title */
+.menu-section h2 {
+  font-size: 3rem;
+  font-family: 'Corinthia';
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 5px;
+  color: rgb(177, 12, 12);
+}
+
+/* Menu list inside section */
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual menu item */
+.menu-item {
+  display: flex;
+  justify-content: space-between; /* name left, price right */
+  padding: 12px 0;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #f0f0f0;
+  transition: color 0.2s ease;
+}
+
+.menu-item:hover {
+  color: #e3210c; /* site accent */
+}
+
+/* Item text styling */
+.item-name {
+  font-weight: 500;
+}
+
+.item-price {
+  font-weight: 600;
 }
