@@ -1,15 +1,16 @@
+/* ===================== NAVBAR ===================== */
+
 /* Navbar container */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: white;
+  background-color: #f7dfd0; /* light background */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: relative;
-  z-index: 100;
+  z-index: 1000;
 }
-
 
 /* Logo */
 .logo {
@@ -17,7 +18,7 @@
   font-size: 4.5rem;       /* big elegant logo */
   font-weight: 400;
   letter-spacing: 2px;
-  color: #222;
+  color: #c01a08;          /* brand color */
   margin: 0;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
@@ -27,20 +28,30 @@
   display: flex;
   gap: 32px;
   align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 120px;
 }
 
-/* Menu links */
+/* Navbar links */
 .menu a {
+  color: #222;          /* default link color */
   text-decoration: none;
-  color: #222;
   font-weight: 500;
-  position: relative;
-  padding: 4px 0;
   transition: color 0.2s ease;
+  font-size: 1.1rem;
 }
 
-.menu a:hover {
-  color: #c01a08;
+.menu a:hover,
+.menu a:focus,
+.menu a:active {
+  color: #c01a08;       /* accent color on hover/focus */
+  outline: none;
+}
+
+.menu a:visited {
+  color: #222;          /* prevent purple visited links */
 }
 
 /* Dropdown container */
@@ -60,24 +71,19 @@
   color: #c01a08;
 }
 
-/* Make dropdown open to the left if near the edge */
+/* Dropdown menu */
 .dropdownMenu {
+  display: none;               /* hide by default */
   position: absolute;
   top: 100%;
   left: 0;
   background-color: #111;
   border-radius: 8px;
-  padding: 0;
+  padding: 8px 0;
   min-width: 180px;
   flex-direction: column;
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
   z-index: 200;
-}
-
-/* Add a class if dropdown is near the edge */
-.dropdown.right-edge .dropdownMenu {
-  left: auto;   /* cancel left positioning */
-  right: 0;     /* align to the right of parent li */
 }
 
 /* Dropdown items */
@@ -85,13 +91,22 @@
   padding: 12px 20px;
   color: white;
   text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .dropdownItem:hover {
-  background-color: #d7cece;
+  background-color: #c01a08;
+  color: white;
 }
 
 /* Show dropdown on hover */
 .dropdown:hover .dropdownMenu {
   display: flex;
+  flex-direction: column;
+}
+
+/* Right-edge dropdown adjustment */
+.dropdown.right-edge .dropdownMenu {
+  left: auto;
+  right: 0;
 }

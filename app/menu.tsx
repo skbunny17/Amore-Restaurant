@@ -71,13 +71,13 @@ export const menuSections: MenuSection[] = [
   {
     title: "Drinks",
     items: [
-      { name: 'Strawberry Mocktail', price: '$11' }, // you can replace with actual drinks
-      { name: 'Watermelon Lemonade', price: '$12' }, // example placeholder
-      { name: 'Coca Cola', price: '$10' }, // example placeholder
-      { name: 'Fanta', price: '$8' }, // example placeholder
+      { name: 'Strawberry Mocktail', price: '$11' }, 
+      { name: 'Watermelon Lemonade', price: '$12' }, 
+      { name: 'Coca Cola', price: '$10' }, 
+      { name: 'Fanta', price: '$8' }, 
       { name: 'Sprite', price: '$8' }, 
       { name: 'Pina Colada', price: '$12' }, 
-      { name: 'Blue Lagoon', price: '$15' }, // example placeholder
+      { name: 'Blue Lagoon', price: '$15' }, 
 
     ],
   },

@@ -11,19 +11,21 @@ body {
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;  /* aligns everything to the left */
   align-items: center;
   padding: 20px 40px;
-  background: #fef6f0;
+  background-color: #f7dfd0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 1000;
   position: relative;
+  z-index: 1000;
+  gap: 680px; /* space between logo and menu */
 }
+
 
 /* Logo */
 .logo {
   font-family: 'Corinthia', cursive; /* cursive font */
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 400;
   color: #c01a08;
   margin: 0;
@@ -39,9 +41,8 @@ body {
 
 .hero-image {
   width: 100%;
-  max-height: 450px;
+  max-height: 550px;
   object-fit: cover;
-  border-radius: 8px;
 }
 
 .hero-text p {
@@ -64,8 +65,8 @@ body {
   display: flex;
   gap: 20px;
   list-style: none;
-  color: #d71818;
   font-size: 1em;
+  text-decoration: none;
 }
 
 .nav-links,
@@ -95,7 +96,7 @@ body {
 }
 
 .about-text h3 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-bottom: 20px;
   font-family: 'Corinthia', cursive;
   color: #c01a08;
@@ -220,23 +221,50 @@ select.reserve-input {
   color: #090909;
 }
 
+/* Target all links inside nav-links */
+.nav-links a {
+  color: black;          /* make links black */
+  text-decoration: none; /* remove underline */
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+/* Hover/focus/active states */
+.nav-links a:hover,
+.nav-links a:focus,
+.nav-links a:active {
+  color: black;          /* stay black on hover/focus */
+  outline: none;
+}
+
+/* Visited links */
+.nav-links a:visited {
+  color: black;          /* prevent purple */
+}
+
+
 .dropdownMenu {
   position: absolute;
-  top: 120%;
+  top: 110%;
   left: 0;
   background-color: #920c20;
   border-radius: 4px;
-  padding: 12px 0;
-  min-width: 200px;
+  padding: 22px 0;
+  min-width: 145px;
   display: none;
   flex-direction: column;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 30px rgba(214, 185, 185, 0.25);
   z-index: 200;
+}
+
+/* Dropdown items specifically */
+.nav-links .dropdownMenu .dropdownItem {
+  color: white;           /* font white */
+  text-decoration: none;
 }
 
 .dropdownItem {
   padding: 12px 20px;
-  color: white;
   text-decoration: none;
   transition: background-color 0.2s ease;
 }
@@ -258,24 +286,35 @@ select.reserve-input {
 
 /* Center the menu container */
 .menu {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 60px 20px;
+  margin: 40px auto 0 auto; 
   text-align: center;
   font-family: 'Georgia', serif;
+  background-color: #faf9fb;      /* whole menu section background */
+  min-height: 100vh;              /* fills page */
+  padding: 60px 40px 100px 40px;
+  border-radius: 10px;
+  border: 2px solid #c01a08;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  max-width: 800px;
 }
+
 
 /* Main menu title */
 .menu h1 {
   font-size: 3rem;
+  font-style: italic;
   font-weight: 700;
   margin-bottom: 50px;
   letter-spacing: 1px;
+  color: #e01e08;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 /* Each menu section (Lunch, Dinner, Dessert, Drinks) */
 .menu-section {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 /* Section title */
@@ -284,9 +323,9 @@ select.reserve-input {
   font-family: 'Corinthia';
   font-weight: 600;
   margin-bottom: 20px;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 2px solid #080808;
   padding-bottom: 5px;
-  color: rgb(177, 12, 12);
+  color: rgb(242, 7, 7);
 }
 
 /* Menu list inside section */
@@ -301,8 +340,6 @@ select.reserve-input {
   display: flex;
   justify-content: space-between; /* name left, price right */
   padding: 12px 0;
-  font-size: 1.2rem;
-  border-bottom: 1px solid #f0f0f0;
   transition: color 0.2s ease;
 }
 
@@ -316,5 +353,5 @@ select.reserve-input {
 }
 
 .item-price {
-  font-weight: 600;
+  font-weight: 500;
 }
