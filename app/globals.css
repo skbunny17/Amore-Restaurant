@@ -289,13 +289,30 @@ select.reserve-input {
   margin: 40px auto 0 auto; 
   text-align: center;
   font-family: 'Georgia', serif;
-  background-color: #faf9fb;      /* whole menu section background */
+  background-color: rgb(248, 239, 234);   /* whole menu section background */
   min-height: 100vh;              /* fills page */
   padding: 60px 40px 100px 40px;
   border-radius: 10px;
   border: 2px solid #c01a08;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   max-width: 800px;
+}
+
+/* ===================== MENU PAGE ===================== */
+
+/* Style for images in the menu */
+.menu-image {
+  width: 100%; /* Make images responsive */
+  max-width: 600px; /* Maximum width for the image */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 20px; /* Add some spacing above the image */
+  border-radius: 10px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Optional: Add subtle shadow */
+}
+
+.dessert-image, .drinks-image {
+  text-align: center; /* Center the images */
+  margin-top: 40px; /* Add spacing above the images */
 }
 
 
