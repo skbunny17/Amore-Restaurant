@@ -59,6 +59,7 @@ export const menuSections: MenuSection[] = [
     title: "Dessert",
     items: [
       { name: 'Tiramisu', price: '$12' },
+      { name: 'Creme Brulee (V)', price : '10'},
       { name: 'Cheesecake', price: '$17' },
       { name: 'Molten Lava Cake', price: '$19' },
       { name: 'Icecream Sundae', price: '$20' },

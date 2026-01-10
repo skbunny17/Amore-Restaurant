@@ -14,6 +14,7 @@ export default function Hero() {
       <div className="hero-text">
         <p>Authentic Italian Cuisine</p>
       </div>
+      
     </section>
   )
 }

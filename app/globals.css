@@ -14,7 +14,7 @@ body {
   justify-content: flex-start;  /* aligns everything to the left */
   align-items: center;
   padding: 20px 40px;
-  background-color: #f7dfd0;
+  background-color: #ffdfcb;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: relative;
   z-index: 1000;
@@ -344,7 +344,7 @@ select.reserve-input {
 }
 
 .menu-item:hover {
-  color: #e3210c; /* site accent */
+  color: #b62413; /* site accent */
 }
 
 /* Item text styling */
@@ -354,4 +354,117 @@ select.reserve-input {
 
 .item-price {
   font-weight: 500;
+}
+
+.halal{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+
+.allergy{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+
+/* General Styles for the Locations Section */
+.locations-container {
+  padding: 140px;
+  background-color: #080101; /* Dark background */
+  color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Removed border-radius here */
+}
+
+.locations-content {
+  display: flex;
+  flex-direction: column; /* Stack content on mobile */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.locations-text {
+  text-align: center; /* Center text on small screens */
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+    color: rgb(230, 227, 227);
+}
+
+.locations-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.locations-text p {
+  color: rgb(230, 227, 227);
+  margin-bottom: 20px;
+}
+
+.view-locations-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: medium;
+  font-weight: 500;
+  background-color: #d81a1a;
+  color: rgb(230, 227, 227);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.view-locations-btn:hover {
+  background-color: #b8170b;
+}
+/* General Styles for the Locations Section */
+.locations-container {
+  padding: 60px;  /* Increased padding for more space */
+  background-color: #111; /* Dark background */
+  color: white;
+  max-width: 1400px; /* Increased max-width for larger section */
+  margin: 0 auto;
+}
+
+.locations-content {
+  display: flex;
+  flex-direction: column; /* Stack content on mobile */
+  align-items: center;
+  justify-content: center;
+  gap: 30px;  /* Increased gap between text and image */
+}
+
+
+/* Right Image Container */
+.locations-image {
+  width: 100%;
+  max-width: 800px; /* Increased max-width for the image container */
+  display: flex;
+  justify-content: center;
+  margin-left: 40px;  /* Added margin to push the image more to the right */
+}
+
+.image {
+  border-radius: 10px;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+/* Media Query for Larger Screens (Side-by-Side Layout) */
+@media (min-width: 768px) {
+  .locations-content {
+    flex-direction: row; /* Side-by-side layout on larger screens */
+    align-items: center; /* Vertically align the items */
+    justify-content: space-between;
+  }
+
+  .locations-text {
+    text-align: left; /* Align text to the left on larger screens */
+    max-width: 50%;
+  }
+
+  .locations-image {
+    max-width: 60%;  /* Make the image take up more space on larger screens */
+    margin-left: 50px; /* Increase margin to push the image further to the right */
+  }
 }
