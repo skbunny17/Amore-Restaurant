@@ -1,6 +1,7 @@
 import './globals.css'
 import Navbar from './components/navbar';
 import Footer from './footer';
+import ContactPage from './contact/page';
 
 export const metadata = {
   title: 'Amore | Italian Restaurant',

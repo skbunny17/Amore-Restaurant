@@ -40,7 +40,6 @@ export const menuSections: MenuSection[] = [
       { name: 'Chicken Alfredo Pasta', price: '$20' },
       { name: 'Sundried Tomato Pasta', price: '$25' },
       { name: 'Chicken Schnitzel with Chips & Salad', price: '$22' },
-      { name: 'Fettucine Carbonara', price: '$25' },
     ],
   },
   {

@@ -1,7 +1,10 @@
-import React from 'react';
-import Image from "next/image";
+"use client";
 
-const Locations = () => {
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+const LocationsSection = () => {
   return (
     <section className="locations-container">
       <div className="locations-content">
@@ -9,19 +12,21 @@ const Locations = () => {
         <div className="locations-text">
           <h2>Our Locations</h2>
           <p>
-            Select from our range of conveniently located restaurants across South West and North Sydney.
+            Visit our conveniently located restaurant! Experience the best food with a luxurious and cozy atmosphere, perfect for family, friends, or date nights.
           </p>
-          <a href="#locations" className="view-locations-btn">View Locations</a>
+
+          <Link href="/locations" className="view-locations-btn">
+            View Locations
+          </Link>
         </div>
 
         {/* Right: Image */}
         <div className="locations-image">
           <Image
-            src="/images/candle.webp" // Replace with your image path
-            alt="Restaurant Locations"
-            width={600}  // Set your image width
-            height={600} // Set your image height
-            layout="responsive"  // Ensures the image is scaled responsively
+            src="/images/candlelight.webp" // Make sure this path exists in /public/images
+            alt="Restaurant Location"
+            width={600}  
+            height={600} 
             className="image"
           />
         </div>
@@ -30,4 +35,4 @@ const Locations = () => {
   );
 };
 
-export default Locations;
+export default LocationsSection;

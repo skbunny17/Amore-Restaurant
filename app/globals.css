@@ -78,14 +78,7 @@ body {
 
 /* ===================== CTA BUTTON ===================== */
 
-.cta {
-  margin-top: 20px;
-  padding: 12px 24px;
-  background: #c01a08;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
+
 
 /* ===================== ABOUT US ===================== */
 
@@ -163,10 +156,6 @@ body {
   background-color: #c01a08;
   color: white;
   cursor: pointer;
-}
-
-.reserve-button:hover {
-  background-color: #c01a08;
 }
 
 .reserve-text {
@@ -298,7 +287,178 @@ select.reserve-input {
   max-width: 800px;
 }
 
-/* ===================== MENU PAGE ===================== */
+/* Wrapper for all menu images */
+.menu-image-wrapper {
+  border-radius: 20px;   /* rounds corners */
+  overflow: hidden;      /* clips the Next.js Image inside */
+  display: block;        /* ensures it behaves like a block element */
+  width: 100%;           /* responsive */
+  max-width: 600px;      /* limits width */
+  margin: 20px auto;     /* centers the image horizontally */
+}
+
+/* Target the actual <img> inside Next.js Image */
+.menu-image-wrapper img {
+  border-radius: 20px;   /* ensures inner image is rounded */
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Optional: make top hero image bigger */
+.hero-image-wrapper {
+  max-width: 800px;      /* larger for top image */
+  margin-bottom: 40px;
+}
+
+.contact-page {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Hero Section */
+.contact-hero h1 {
+  font-size: 3rem;
+  color: #cb0718;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.contact-hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 0 40px 0;
+  text-align: left;
+}
+
+/* Info + Form Section */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  text-align: left;
+  margin-bottom: 60px;
+}
+
+/* Restaurant Info */
+.contact-info {
+  flex: 1 1 300px;
+}
+
+.contact-info h2 {
+  color: #cb0718;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* Opening Hours */
+.opening-hours {
+  margin-top: 20px;
+}
+
+.opening-hours h3 {
+  font-size: 1.5rem;
+  color: #cb0718;
+  margin-bottom: 10px;
+}
+
+.opening-hours p {
+  margin: 2px 0;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Phone input container */
+.phone-input {
+  display: flex;
+  gap: 10px;
+}
+
+.country-code {
+  width: 60px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: center;
+  background-color: #f15850;
+  cursor: default;
+}
+
+.phone-number {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.country-code {
+  width: 60px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: center;
+  background-color: #bf2929;  /* Darker background to contrast white text */
+  color: white;           /* Makes the +61 text white */
+  cursor: default;
+}
+
+
+.contact-form button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #bf2929;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Google Map */
+.contact-map iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 400px;
+  border: 0;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto; /* centers the map */
+}
+
+/* Responsive: stack everything on mobile */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+  }
+
+  .contact-form,
+  .contact-info {
+    flex: 1 1 100%;
+  }
+}
+
 
 /* Style for images in the menu */
 .menu-image {
@@ -306,7 +466,7 @@ select.reserve-input {
   max-width: 600px; /* Maximum width for the image */
   height: auto; /* Maintain aspect ratio */
   margin-top: 20px; /* Add some spacing above the image */
-  border-radius: 10px; /* Optional: Rounded corners */
+  border-radius: 20px; /* Optional: Rounded corners */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Optional: Add subtle shadow */
 }
 

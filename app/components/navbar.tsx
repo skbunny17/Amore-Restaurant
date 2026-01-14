@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import React from "react";
-
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -17,7 +16,7 @@ export default function Navbar() {
           </Link>
         </li>
 
-        {/* Menu navigates to /menu page */}
+        {/* Menu */}
         <li>
           <Link href="/menu" className="nav-link">
             Menu
@@ -33,7 +32,12 @@ export default function Navbar() {
 
         {/* Locations dropdown */}
         <li className="dropdown">
-          <span className="dropdownTitle">Locations</span>
+          {/* Clicking this takes you to /locations */}
+          <Link href="/locations" className="nav-link dropdownTitle">
+            Locations
+          </Link>
+
+          {/* Dropdown appears on hover */}
           <ul className="dropdownMenu">
             <li>
               <Link href="/locations/sydney-cbd" className="dropdownItem">

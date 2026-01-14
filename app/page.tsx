@@ -2,6 +2,7 @@ import Hero from './hero';
 import AboutUs from './about';
 import ReserveTable from './reservetable';
 import Locations from './locations';
+import ContactPage from './contact/page';
 
 
 export default function HomePage() {

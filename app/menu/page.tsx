@@ -7,13 +7,16 @@ export default function MenuPage() {
   return (
     <main>
       <section className="menu">
-        {/* Hero image at top */}
-        <Image
-          src="/images/burger.jpg" // path from public folder
-          alt="burger"
-          width={400}  
-          height={300}
-        />
+ {/* Hero image at top */}
+<div className="hero-image-container">
+  <Image
+    src="/images/burger.jpg"
+    alt="burger"
+    width={400}  
+    height={200}
+    className="menu-image"
+  />
+</div>
 
         <h1>Our Menu</h1>
         <p className="halal">
@@ -35,6 +38,54 @@ export default function MenuPage() {
                 </li> 
               ))}
             </ul>
+
+              {section.title === "Dinner" && (
+              <div className="dinner-image">
+                <Image
+                  src="/images/linguine.avif" 
+                  alt="Linguine"
+                  width={600}
+                  height={400}
+                  className="menu-image" 
+                />
+              </div>
+            )}
+            
+             {section.title === "Appetisers" && (
+              <div className="appetisers-image">
+                <Image
+                  src="/images/mozz.jpg" 
+                  alt="Linguine"
+                  width={400}
+                  height={200}
+                  className="menu-image" 
+                />
+              </div>
+            )}
+            
+            {section.title === "Sides" && (
+              <div className="sides-image">
+                <Image
+                  src="/images/salad.webp" 
+                  alt="Linguine"
+                  width={400}
+                  height={400}
+                  className="menu-image" 
+                />
+              </div>
+            )}
+           
+            {section.title === "Lunch Specials" && (
+              <div className="lunch-image">
+                <Image
+                  src="/images/marpizza.webp" 
+                  alt="marg"
+                  width={600}
+                  height={400}
+                  className="menu-image" 
+                />
+              </div>
+            )}
 
             {/* Add Dessert Image below the Desserts section */}
             {section.title === "Dessert" && (
