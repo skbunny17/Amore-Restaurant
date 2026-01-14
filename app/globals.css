@@ -29,7 +29,9 @@ body {
   font-weight: 400;
   color: #c01a08;
   margin: 0;
+  text-decoration: none; 
 }
+
 
 /* ===================== HERO BANNER ===================== */
 
@@ -82,15 +84,21 @@ body {
 
 /* ===================== ABOUT US ===================== */
 
+
+
 .about-us {
-  padding: 60px 20px;
+  padding: 40px 20px;
   text-align: center;
   background: #f9d8c4;
+  padding-bottom: 2rem; /* add some space below */
+  margin-top: 0;        /* remove margin above section */
 }
+
 
 .about-text h3 {
   font-size: 3.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
   font-family: 'Corinthia', cursive;
   color: #c01a08;
   word-spacing: 5px;
@@ -102,6 +110,7 @@ body {
   margin: 0 auto 40px auto;
   color: #333;
 }
+
 
 .about-images {
   display: flex;
@@ -122,8 +131,10 @@ body {
 
 /* ===================== RESERVE TABLE ===================== */
 
+/* Remove space above the Reserve section and title */
 .reserve-section {
-  padding-top: 2rem;
+  padding-top: 0;   /* removes top padding */
+  margin-top: 0;    /* removes top margin */
   padding-bottom: 2rem;
 }
 
@@ -136,9 +147,10 @@ body {
   font-family: 'Corinthia', cursive;
   font-size: 5rem;
   text-align: center;
-  margin-bottom: 1rem;
   word-spacing: 10px;
   color: #c01a08;
+  margin-top: 25;    /* removes top margin on the heading */
+  margin-bottom: 0.5rem;
 }
 
 .reserve-form {
@@ -644,4 +656,57 @@ select.reserve-input {
     max-width: 60%;  /* Make the image take up more space on larger screens */
     margin-left: 50px; /* Increase margin to push the image further to the right */
   }
+}
+
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 20px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #f1f1f1;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 6px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #e01e08;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #ccc;
 }

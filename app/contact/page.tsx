@@ -17,7 +17,7 @@ export default function ContactPage() {
           <h2>Our Location</h2>
           <p>123 Delicious Street, Foodville, NSW 2000</p>
           <p>Phone: (02) 1234 5678</p>
-          <p>Email: info@restaurant.com</p>
+          <p>Email: info@amorerestaurant.com</p>
 
           {/* Opening Hours */}
           <div className="opening-hours">
