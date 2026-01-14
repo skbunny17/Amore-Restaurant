@@ -488,6 +488,25 @@ select.reserve-input {
 }
 
 
+/* Wrapper for select + icon */
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.select-wrapper select {
+  padding-left: 30px; /* space for the icon */
+}
+
+.reserve-icon {
+  position: absolute;
+  left: 83px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #080808;
+  pointer-events: none; /* so it doesn't block clicks */
+}
+
 /* Main menu title */
 .menu h1 {
   font-size: 3rem;
@@ -681,7 +700,7 @@ select.reserve-input {
 .footer-section h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  color: #f1f1f1;
+  color: #ef2929;
 }
 
 .footer-section ul {
