@@ -3,6 +3,12 @@
 import { RxPerson } from "react-icons/rx";
 
 export default function ReserveTable() {
+  // Demo reservation handler
+  const handleReservation = (e: React.FormEvent) => {
+    e.preventDefault(); // prevent page reload
+    alert("Reservation submitted successfully! (demo mode)");
+  };
+
   return (
     <section className="reserve-section">
       <h2 className="reserve-title">Reserve a Table</h2>
@@ -10,7 +16,7 @@ export default function ReserveTable() {
         Bookings for 10+ people require management approval. Please contact us to reserve a table in advance.
       </p>
 
-      <form className="reserve-form">
+      <form className="reserve-form" onSubmit={handleReservation}>
         <input type="date" className="reserve-input" required />
         <input type="time" className="reserve-input" required />
 
