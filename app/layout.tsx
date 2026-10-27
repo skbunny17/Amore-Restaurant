@@ -1,7 +1,8 @@
-import './globals.css'
+// @ts-ignore -- Next.js handles this stylesheet import at build time.
+import './globals.css';
 import Navbar from './components/navbar';
 import Footer from './footer';
-import ContactPage from './contact/page';
+
 
 export const metadata = {
   title: 'Amore | Italian Restaurant',
@@ -15,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-  <head>
+      <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

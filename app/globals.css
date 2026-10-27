@@ -9,16 +9,17 @@ body {
 
 /* ===================== NAVBAR ===================== */
 
+
 .nav {
   display: flex;
-  justify-content: flex-start;  /* aligns everything to the left */
+  justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
   background-color: #ffdfcb;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1000;
-  gap: 680px; /* space between logo and menu */
+  gap: 30px;
 }
 
 
