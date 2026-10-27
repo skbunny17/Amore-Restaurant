@@ -2,6 +2,52 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+Amore Italian Restaurant Website
+
+# Overview
+
+Amore is an Italian restaurant website built to showcase the restaurant's brand, menu, and dining experience through a modern, user-friendly interface. The project focuses on presenting restaurant information clearly and creating an engaging experience for visitors.
+
+# Technologies Used
+
+Next.js – React-based web framework
+TypeScript – Type-safe JavaScript development
+CSS – Website styling and layout
+
+# Key Features
+
+Restaurant homepage and branding
+
+Menu presentation
+
+Navigation between website sections
+
+Restaurant location information
+
+Reservation interface
+
+Food imagery and visual design
+
+# Project Goals
+
+Create a polished and responsive restaurant website with the help of learning Typescript with AI.
+Make restaurant information easy for visitors to find.
+Apply front-end development skills and designing to a practical project.
+Combine visual design with functional website navigation.
+
+# Skills Demonstrated
+
+- Front-end web development
+- React and Next.js fundamentals
+- TypeScript
+- UI layout and styling
+- Website structure and navigation
+- Digital product design
+
+
+
+How to begin?
+
 First, run the development server:
 
 ```bash
