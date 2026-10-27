@@ -10,9 +10,10 @@ Amore is an Italian restaurant website built to showcase the restaurant's brand,
 
 # Technologies Used
 
-Next.js – React-based web framework
-TypeScript – Type-safe JavaScript development
-CSS – Website styling and layout
+Next.js 
+TypeScript
+CSS 
+Website styling and layout
 
 # Key Features
 
